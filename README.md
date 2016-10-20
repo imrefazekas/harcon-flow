@@ -21,7 +21,7 @@ This is an easy way to convert flow definitions into [harcon](https://github.com
 
 
 
-#### General structure
+#### Flow definitions
 
 ```javascript
 ['->'] actor [ ':' message ] control_flow
