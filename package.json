@@ -1,6 +1,6 @@
 {
   "name": "harcon-flow",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Small utility library to descript business flows for harcon",
   "keywords": [
     "business flow",
@@ -25,6 +25,10 @@
     "proback.js": "^1.6.0"
   },
   "devDependencies": {
+  },
+  "browser": {
+    "fs": false,
+    "child_process": false
   },
   "engines": {
     "node": ">= 4.0.0"
