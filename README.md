@@ -2,6 +2,25 @@ Harcon-flow is a simple utility library aiming to leverage a very simple syntax 
 
 
 
+#### Installation
+
+$ npm install harcon-flow
+
+
+#### Quick setup
+
+```javascript
+var flow = require('harcon-flow')
+flow.generateDefs( [ { name: '', def: 'some flow def' ] )
+.then( (flows) => {
+	console.log( flows.defs )
+} )
+```
+
+This is an easy way to convert flow definitions into [harcon](https://github.com/imrefazekas/harcon)-specific Bender flow.
+
+
+
 #### General structure
 
 ```javascript
@@ -60,6 +79,21 @@ You can have comment-lines started with __'#'__ or comments at the end of other 
 -> B : perform => // some message received
 	 C : do
 ```
+
+
+
+#### Example
+
+```javascript
+# internal activity
+{}B:greetings => // waterfall
+	 C : do
+	 D : act
+	 <>E : manage
+	 ()C : care
+ ```
+
+The entity __'B'__ will eventually perform its service 'greetings' which will send out messages to entities _'C', 'D', 'E' and 'C'__ in that order sending the result of a given call to the next actor, as waterfall model works.
 
 
 
