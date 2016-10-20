@@ -1,0 +1,32 @@
+{
+  "name": "harcon-flow",
+  "version": "1.0.0",
+  "description": "Small utility library to descript business flows for harcon",
+  "keywords": [
+    "business flow",
+    "harcon"
+  ],
+  "homepage": "https://github.com/imrefazekas/harcon-flow",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/imrefazekas/harcon-flow.git"
+  },
+  "bugs": {
+    "url": "http://github.com/imrefazekas/harcon-flow/issues"
+  },
+  "author": {
+    "name": "Imre Fazekas",
+    "email": "mail@imrefazekas.me"
+  },
+  "license": "MIT",
+  "main": "./lib/FlowParser.js",
+  "dependencies": {
+    "assign.js": "^2.3.0",
+    "proback.js": "^1.6.0"
+  },
+  "devDependencies": {
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  }
+}
