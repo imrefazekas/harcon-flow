@@ -20,7 +20,7 @@ describe('Harcon-Flow', function () {
 
 	describe('Test Flow conversion', function () {
 		it('Simple', function (done) {
-			Parser.generateDefs( flows )
+			Parser.generateDefs( flows, {} )
 			.then( (flow) => {
 				console.log( '.....', JSON.stringify( flow ) )
 				done()
@@ -31,9 +31,22 @@ describe('Harcon-Flow', function () {
 		} )
 
 		it('Link', function (done) {
-			Parser.generateDefs( linkFlows )
+			Parser.generateDefs( linkFlows, {} )
 			.then( (flow) => {
 				console.log( '.....', JSON.stringify( flow ) )
+				done()
+			} )
+			.catch( (reason) => {
+				done(reason)
+			} )
+		} )
+	} )
+
+	describe('Test Graph conversion', function () {
+		it('D3', function (done) {
+			Parser.generateDefs( linkFlows, { d3: true } )
+			.then( (flow) => {
+				console.log( '.....', flow.graph )
 				done()
 			} )
 			.catch( (reason) => {
