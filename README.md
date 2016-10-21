@@ -69,6 +69,25 @@ One of the signs can be places before any actors in the definition as follows:
 ```
 
 
+#### Links
+
+When a multiple flows are defined and passed to [harcon-flow](https://github.com/imrefazekas/harcon-flow), you are allowed to refer a flow from another as below:
+
+```javascript
+// bDef file:
+-> B : perform =>
+	 [C goes nuts]
+...
+// cDef file:
+C : do =>
+ 	 D : act
+	 E : urge
+	 F : move
+...
+flow.generateDefs( [ { name: 'Client sends in data', def: bDef }, { name: 'C goes nuts', def: cDef } ] )
+```
+
+
 
 #### Comments
 

@@ -1,4 +1,4 @@
 # external call
 -> []A -> // series
-	B : calculatePrices
+	[ calculate the prices ]
 	C : send
