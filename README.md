@@ -89,7 +89,7 @@ flow.generateDefs( [ { name: 'Client sends in data', def: bDef }, { name: 'C goe
 ```
 
 
-#### Graph exprot
+#### Graph export
 
 Pass an optional object to the function __generateDefs__ to force [harcon-flow](https://github.com/imrefazekas/harcon-flow) to generate graph representation of the flows as below:
 
