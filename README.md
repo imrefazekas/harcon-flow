@@ -85,7 +85,19 @@ C : do =>
 	 F : move
 ...
 flow.generateDefs( [ { name: 'Client sends in data', def: bDef }, { name: 'C goes nuts', def: cDef } ] )
+.then( (flows) { ... } )
 ```
+
+
+#### Graph exprot
+
+Pass an optional object to the function __generateDefs__ to force [harcon-flow](https://github.com/imrefazekas/harcon-flow) to generate graph representation of the flows as below:
+
+```javascript
+flow.generateDefs( [ { name: 'Client sends in data', def: bDef }, { name: 'C goes nuts', def: cDef } ], { d3: true } )
+```
+
+The current version supports D3 only.
 
 
 
