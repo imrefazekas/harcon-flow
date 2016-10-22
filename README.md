@@ -97,7 +97,7 @@ Pass an optional object to the function __generateDefs__ to force [harcon-flow](
 flow.generateDefs( [ { name: 'Client sends in data', def: bDef }, { name: 'C goes nuts', def: cDef } ], { d3: true } )
 ```
 
-The current version supports D3 only.
+The current version supports [D3](https://d3js.org) only.
 
 
 
