@@ -1,4 +1,4 @@
 # external call
 -> []A -> // series
 	[ calculate the prices ]
-	C : send
+	Dom | C : send
