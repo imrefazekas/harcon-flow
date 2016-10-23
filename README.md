@@ -112,6 +112,14 @@ You can have comment-lines started with __'#'__ or comments at the end of other 
 ```
 
 
+#### Domains
+
+You might want to add domains to your flows by adding '|' before your entities as below:
+
+```javascript
+Dom | C : send
+```
+
 
 #### Example
 
