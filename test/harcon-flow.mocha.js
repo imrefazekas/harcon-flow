@@ -7,12 +7,12 @@ describe('Harcon-Flow', function () {
 	before(function (done) {
 		try {
 			flows = [
-				{ name: 'react', def: fs.readFileSync('./test/react.flow', 'utf8') },
-				{ name: 'continue', def: fs.readFileSync('./test/continue.flow', 'utf8') }
+				{ name: 'react', def: fs.readFileSync('./test/react.flow', 'utf8'), validation: require('./react') },
+				{ name: 'continue', def: fs.readFileSync('./test/continue.flow', 'utf8'), validation: require('./continue') }
 			]
 			linkFlows = [
-				{ name: 'make an offer', def: fs.readFileSync('./test/link.flow', 'utf8') },
-				{ name: 'calculate the prices', def: fs.readFileSync('./test/continue.flow', 'utf8') }
+				{ name: 'make an offer', def: fs.readFileSync('./test/link.flow', 'utf8'), validation: require('./link') },
+				{ name: 'calculate the prices', def: fs.readFileSync('./test/continue.flow', 'utf8'), validation: require('./continue') }
 			]
 			done()
 		} catch (err) { done(err) }

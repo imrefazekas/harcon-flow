@@ -1,6 +1,6 @@
 {
   "name": "harcon-flow",
-  "version": "1.8.0",
+  "version": "2.0.0",
   "description": "Small utility library to descript business flows for harcon",
   "keywords": [
     "business flow",
@@ -31,6 +31,6 @@
     "child_process": false
   },
   "engines": {
-    "node": ">= 4.0.0"
+    "node": ">= 6.0.0"
   }
 }
