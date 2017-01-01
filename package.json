@@ -1,6 +1,6 @@
 {
   "name": "harcon-flow",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Small utility library to descript business flows for harcon",
   "keywords": [
     "business flow",
@@ -21,8 +21,8 @@
   "license": "MIT",
   "main": "./lib/FlowParser.js",
   "dependencies": {
-    "assign.js": "^2.3.0",
-    "proback.js": "^1.6.0"
+    "assign.js": "^2.4.0",
+    "proback.js": "^1.7.1"
   },
   "devDependencies": {
   },
