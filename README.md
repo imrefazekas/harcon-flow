@@ -19,19 +19,32 @@ flow.generateDefs( [ { name: '', def: 'some flow def' ] )
 
 This is an easy way to convert flow definitions into [harcon](https://github.com/imrefazekas/harcon)-specific Bender flow.
 
+The following section tries to formalise the structure of flow defitions.
 
 
 #### Flow definitions
 
 ```javascript
 ['->'] actor [ ':' message ] control_flow
-	actor : message
-	// more actor : message lines
+	message
+	// another message
 ```
 
-The first optional mark signs that the given actor is initiated from a REST or websocket call. That will make the actor implicitly a REST-, and Websocket-compliant.
-Then you define the name of the actor, the message its receives and the flow control it represents and finally all the messages it sends out.
+The first optional mark signs that the given actor is initiated from a REST or websocket call.
+That will make the actor implicitly a REST-, and Websocket-compliant.
+Then you define the name of the actor, the message its receives and the type of the [flow control](#control_flow) it represents and finally all the messages it sends out.
 
+message:
+
+```javascript
+'[' workflow name ']'
+or
+['*'] [domain '|'] [ interface ] actor : message
+```
+
+The optional '*' sign means, that the result of the flow's main actor will be interpreted as array and for all elements that given message will be sent to as a bulk operation.
+
+Domain and interface specifications are optional. These information should be defined here only if no Flow definition exists assosiated to the given actor.
 
 
 #### Control flow
@@ -61,7 +74,7 @@ You can mark if an entity provides an interface to the outside-world with the fo
 - {}: websocket and rest
 - (): web pages
 
-One of the signs can be places before any actors in the definition as follows:
+One of those signs can be places before any actors in the definition as follows:
 
 ```javascript
 -> {}B : perform =>
