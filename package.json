@@ -1,6 +1,6 @@
 {
   "name": "harcon-flow",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Small utility library to descript business flows for harcon",
   "keywords": [
     "business flow",
