@@ -42,7 +42,7 @@ or
 ['*'] [domain '|'] [ interface ] actor : message
 ```
 
-The optional '*' sign means, that the result of the flow's main actor will be interpreted as array and for all elements that given message will be sent to as a bulk operation.
+The optional '*' sign means, that the result of the flow's main actor will be interpreted as array and for all elements that given message will be sent to as a series of operation.
 
 Domain and interface specifications are optional. These information should be defined here only if no Flow definition exists assosiated to the given actor.
 
