@@ -1,0 +1,8 @@
+# internal activity
+{}B:calculatePrices => // waterfall
+	 C : collect
+	 D : calculate
+	 <>E : rate
+	 ()C : conform
+	 *I : process
+! F: handle
