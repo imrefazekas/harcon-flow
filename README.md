@@ -39,10 +39,13 @@ message:
 ```javascript
 '[' workflow name ']'
 or
-['*'] [domain '|'] [ interface ] actor : message
+['*' | '«' | '»'] [domain '|'] [ interface ] actor : message
 ```
 
-The optional '*' sign means, that the result of the flow's main actor will be interpreted as array and for all elements that given message will be sent to as a series of operation.
+The optional
+'*' means: the result of the flow's main actor will be interpreted as array and for all elements that given message will be sent to as a series of operation.
+'«' means: external call. That message will be sent to an external endpoint.
+'»' means: fragmented execution. This message won't be included in the ongoing thread and current execution won't wait for the arrival of the answer, controll will step to the next message.
 
 Domain and interface specifications are optional. These information should be defined here only if no Flow definition exists assosiated to the given actor.
 
