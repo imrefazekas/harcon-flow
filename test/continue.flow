@@ -4,4 +4,4 @@
 	 D : calculate
 	 <>E : rate
 	 ()C : conform
-	 *I : process
+	 *I : process ^ C.allowThis
