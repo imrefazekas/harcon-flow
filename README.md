@@ -39,7 +39,7 @@ message:
 ```javascript
 '[' workflow name ']'
 or
-['*' | '«' | '»'] [domain '|'] [ interface ] actor : message
+['*' | '«' | '»'] [domain '|'] [ interface ] actor : message [ '^' actor.message ]
 ```
 
 The optional
@@ -48,6 +48,8 @@ The optional
 '»' means: fragmented execution. This message won't be included in the ongoing thread and current execution won't wait for the arrival of the answer, controll will step to the next message.
 
 Domain and interface specifications are optional. These information should be defined here only if no Flow definition exists assosiated to the given actor.
+
+A 'skip if' can be added to the end of the definition to declare, that the given message can be sent only if the 'actor.message' is performed and returned with approving answer.
 
 
 #### Control flow
