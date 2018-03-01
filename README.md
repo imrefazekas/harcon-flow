@@ -49,6 +49,8 @@ The optional
 
 Domain and interface specifications are optional. These information should be defined here only if no Flow definition exists assosiated to the given actor.
 
+Actors can be versioned.
+
 A 'skip if' can be added to the end of the definition to declare, that the given message can be sent only if the 'actor.message' is performed and returned with approving answer.
 
 
@@ -145,13 +147,13 @@ Dom | C : send
 # internal activity
 {}B:greetings => // waterfall
 	 C : do
-	 D : act
+	 D[1.0.0] : act
 	 <>E : manage
 	 ()C : care
  ```
 
 The entity __'B'__ will eventually perform its service 'greetings' which will send out messages to entities _'C', 'D', 'E' and 'C'__ in that order sending the result of a given call to the next actor, as waterfall model works.
-
+In case of 'D', the version of the entity is also defined.
 
 
 ## License
