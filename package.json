@@ -21,7 +21,7 @@
   "license": "MIT",
   "main": "./lib/FlowParser.js",
   "dependencies": {
-    "assign.js": "^2.8.9"
+    "assign.js": "^2.8.11"
   },
   "devDependencies": {},
   "browser": {
